@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Random URL{% endblock %} 
+{%block style %}
+    <style>
+        .outer-box{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .custom-box {
+            box-sizing: border-box;
+            display:block;
+            align-items: center;
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: auto;
+            margin-top: 40px;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+{% block content %} 
+    <div class="outer-box">    
+        <form class="custom-box" action="#" method="POST">
+            <H1>This is your Shortened URL  </H1>
+            <label for="basic-url"><b> 127.0.0.1:5000/{{short_url}} </b></label>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Random URL{% endblock %} 
+{%block style %}
+    <style>
+        .outer-box{
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        .custom-box {
+            box-sizing: border-box;
+            display:block;
+            align-items: center;
+            width: 100%;
+            max-width: 330px;
+            padding: 15px;
+            margin: auto;
+            margin-top: 40px;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+{% block content %} 
+    <div class="outer-box">    
+        <form class="custom-box" action="#" method="POST">
+            <H1> Enter the link to shorten  </H1>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon3">URL</span>
+                </div>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="random">
+            </div>
+            <button type="submit"  class="btn btn-dark btn-block" onclick="location.href='custom'">Generate</button>   
+            {% if error %}
+                <div class="alert alert-dark" role="alert" style="margin-top: 20px;">
+                    Failure! Please try again
+                </div>
+            {% endif %}
+        </form>
+    </div>
+{% endblock %}
